@@ -1,1 +1,21 @@
-
+{
+  "lora_config": {
+    "r": 16,
+    "lora_alpha": 32,
+    "target_modules": ["q_proj", "v_proj", "k_proj", "o_proj"],
+    "lora_dropout": 0.05,
+    "bias": "none"
+  },
+  "training_args": {
+    "learning_rate": 2e-4,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "num_epochs": 5,
+    "weight_decay": 0.01,
+    "warmup_steps": 100,
+    "logging_steps": 10,
+    "save_steps": 500,
+    "eval_steps": 500,
+    "max_length": 512
+  }
+}
